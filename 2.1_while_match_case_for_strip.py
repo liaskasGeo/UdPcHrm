@@ -1,8 +1,7 @@
 todos = []
 
 while True:
-    user_action = input("Type add,show,remove or exit: ")
-    user_action = user_action.strip()
+    user_action = input("Type add,show,remove or exit: ").strip().lower()
 
     match user_action:
         case 'add':
@@ -19,7 +18,7 @@ while True:
             print(todos)
         case 'exit':
             break #breaks the loop
-        case user_types_whatever: # in case user writes whatever , case understands on the fly to print please dont type random things
+        case _: # in case user writes whatever , case understands on the fly to print please dont type random things
             print("Please don't type random things")
 
 
